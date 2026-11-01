@@ -1,9 +1,9 @@
 extends Node2D
 ## Coordinates the first Undercity prototype without owning gameplay systems.
 
-@onready var world = $Undercity
+@onready var world: UndercityPrototype = $Undercity
 @onready var player: CharacterBody2D = $Player
-@onready var hud = $HUD/Overlay
+@onready var hud: PrototypeHUD = $HUD/Overlay
 
 var _interact_was_pressed := false
 var _escape_was_pressed := false
