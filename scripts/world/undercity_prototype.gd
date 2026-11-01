@@ -16,7 +16,7 @@ const INTERACTIONS := [
 		"id": "terminal",
 		"position": Vector2(246.0, 190.0),
 		"prompt": "E  //  ACCESS TERMINAL",
-		"message": "NODE UDC-07 // DEGRADED\nA signal pulses beneath the static. Its handshake predates the city network."
+		"message": "NODE UDC-07 // DEGRADED\nA signal pulses beneath the static.\nIts handshake predates the city network."
 	}
 ]
 
