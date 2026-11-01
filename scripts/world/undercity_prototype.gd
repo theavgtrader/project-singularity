@@ -21,6 +21,42 @@ const INTERACTIONS := [
 ]
 
 const INTERACTION_RANGE := 22.0
+const BUILDING_COLLIDERS := [
+	Rect2(14, 14, 118, 88),
+	Rect2(145, 12, 120, 90),
+	Rect2(278, 16, 142, 86),
+	Rect2(432, 12, 190, 90),
+	Rect2(12, 268, 152, 82),
+	Rect2(182, 270, 130, 80),
+	Rect2(330, 266, 170, 84),
+	Rect2(512, 268, 116, 82)
+]
+
+
+func _ready() -> void:
+	for obstacle in BUILDING_COLLIDERS:
+		_create_obstacle(obstacle)
+
+	# Keep the player inside the current prototype district.
+	_create_obstacle(Rect2(-8, -8, 656, 8))
+	_create_obstacle(Rect2(-8, 360, 656, 8))
+	_create_obstacle(Rect2(-8, 0, 8, 360))
+	_create_obstacle(Rect2(640, 0, 8, 360))
+
+
+func _create_obstacle(rect: Rect2) -> void:
+	var body := StaticBody2D.new()
+	body.name = "Obstacle"
+	body.position = rect.position + rect.size * 0.5
+	body.collision_layer = 1
+	body.collision_mask = 1
+
+	var collision := CollisionShape2D.new()
+	var shape := RectangleShape2D.new()
+	shape.size = rect.size
+	collision.shape = shape
+	body.add_child(collision)
+	add_child(body)
 
 
 func _draw() -> void:
