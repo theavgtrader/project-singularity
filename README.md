@@ -15,7 +15,7 @@ The repository currently contains:
 - A camera, lightweight rain effect, interaction prompts, and prototype HUD.
 - Initial game-design, art-direction, technical, asset-licensing, and roadmap documents.
 
-The current environment uses original in-engine placeholder geometry. No third-party art has been bundled yet. This lets us verify the project before choosing compatible, properly licensed asset packs.
+The current environment uses original in-engine placeholder geometry. Two CC0 candidate packs have been reviewed and recorded in the asset register, but their binary files have not yet been imported. This keeps the initial download small while we confirm the project and asset fit.
 
 ## Requirements
 
