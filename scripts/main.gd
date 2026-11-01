@@ -18,7 +18,7 @@ func _ready() -> void:
 	camera.position_smoothing_enabled = false
 
 	hud.set_location("THE UNDERCITY  /  SECTOR 07")
-	hud.set_hint("WASD OR ARROWS TO MOVE  •  E TO INTERACT")
+	hud.set_hint("MOVE: WASD / ARROWS     USE: E")
 
 
 func _process(_delta: float) -> void:
